@@ -3,227 +3,135 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Said Mustaqim — IT Consultant & Full-Stack Developer</title>
+    <title>Abdullah Said Mustaqim — CV</title>
     <style>
-        /* ── Reset & Base ── */
         *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
 
         :root {
-            --primary: #1a1a2e;
+            --primary: #0f172a;
             --accent: #2563eb;
-            --accent-light: #eff6ff;
+            --accent-light: #dbeafe;
             --text: #1e293b;
             --text-secondary: #64748b;
             --border: #e2e8f0;
             --bg: #ffffff;
         }
 
-        @page {
-            size: A4;
-            margin: 0;
-        }
+        @page { size: A4; margin: 0; }
 
         body {
             font-family: 'Segoe UI', 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
             color: var(--text);
             background: var(--bg);
-            line-height: 1.6;
-            font-size: 13px;
+            line-height: 1.5;
+            font-size: 12.5px;
             -webkit-print-color-adjust: exact;
             print-color-adjust: exact;
         }
 
-        .page {
-            max-width: 800px;
-            margin: 0 auto;
-            padding: 40px 48px;
-        }
+        .page { max-width: 800px; margin: 0 auto; padding: 36px 44px; }
 
         /* ── Header ── */
         .header {
             display: flex;
             justify-content: space-between;
             align-items: flex-start;
-            padding-bottom: 20px;
+            padding-bottom: 16px;
             border-bottom: 3px solid var(--primary);
-            margin-bottom: 24px;
+            margin-bottom: 20px;
         }
 
         .header-left h1 {
-            font-size: 28px;
-            font-weight: 700;
+            font-size: 26px;
+            font-weight: 800;
             color: var(--primary);
             letter-spacing: -0.5px;
-            margin-bottom: 4px;
+            margin-bottom: 3px;
         }
 
         .header-left .title {
-            font-size: 15px;
+            font-size: 14px;
             color: var(--accent);
             font-weight: 600;
-            margin-bottom: 6px;
+            margin-bottom: 4px;
         }
 
         .header-left .tagline {
-            font-size: 12px;
+            font-size: 11.5px;
             color: var(--text-secondary);
         }
 
         .header-right {
             text-align: right;
-            font-size: 12px;
+            font-size: 11.5px;
             color: var(--text-secondary);
-            line-height: 1.8;
+            line-height: 1.9;
         }
 
-        .header-right a {
-            color: var(--accent);
-            text-decoration: none;
-        }
-
-        .header-right .contact-item {
-            display: flex;
-            align-items: center;
-            justify-content: flex-end;
-            gap: 6px;
-        }
-
-        .header-right .contact-label {
-            color: var(--text-secondary);
-            font-weight: 500;
-        }
+        .header-right a { color: var(--accent); text-decoration: none; }
+        .header-right .contact-item { display: flex; align-items: center; justify-content: flex-end; gap: 6px; }
+        .header-right .contact-label { color: var(--text-secondary); font-weight: 600; }
 
         /* ── Sections ── */
-        .section {
-            margin-bottom: 20px;
-        }
+        .section { margin-bottom: 16px; }
 
         .section-title {
-            font-size: 13px;
+            font-size: 12px;
             font-weight: 700;
             text-transform: uppercase;
             letter-spacing: 1.5px;
             color: var(--primary);
             border-bottom: 2px solid var(--accent);
-            padding-bottom: 4px;
-            margin-bottom: 12px;
+            padding-bottom: 3px;
+            margin-bottom: 10px;
         }
 
         /* ── Summary ── */
-        .summary p {
-            font-size: 13px;
-            line-height: 1.7;
-            color: var(--text);
-        }
+        .summary p { font-size: 12.5px; line-height: 1.65; color: var(--text); }
 
         /* ── Skills ── */
-        .skills-grid {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 8px 24px;
-        }
+        .skills-grid { display: grid; grid-template-columns: 1fr 1fr; gap: 6px 20px; }
+        .skill-category { display: flex; align-items: baseline; gap: 8px; }
+        .skill-label { font-weight: 700; font-size: 11.5px; color: var(--primary); white-space: nowrap; min-width: 72px; }
+        .skill-items { font-size: 11.5px; color: var(--text-secondary); line-height: 1.5; }
 
-        .skill-category {
-            display: flex;
-            align-items: baseline;
-            gap: 8px;
-        }
+        /* ── Experience ── */
+        .exp-item { margin-bottom: 12px; padding-left: 12px; border-left: 3px solid var(--accent-light); }
+        .exp-item:hover { border-left-color: var(--accent); }
+        .exp-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1px; }
+        .exp-role { font-weight: 700; font-size: 12.5px; color: var(--primary); }
+        .exp-company { font-size: 12px; color: var(--accent); font-weight: 600; }
+        .exp-meta { font-size: 11px; color: var(--text-secondary); margin-bottom: 3px; }
+        .exp-desc { font-size: 11.5px; color: var(--text-secondary); line-height: 1.55; }
+        .exp-desc ul { margin-top: 2px; padding-left: 16px; }
+        .exp-desc li { margin-bottom: 1px; }
 
-        .skill-label {
-            font-weight: 700;
-            font-size: 12px;
-            color: var(--primary);
-            white-space: nowrap;
-            min-width: 80px;
-        }
-
-        .skill-items {
-            font-size: 12px;
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-
-        /* ── Projects / Experience ── */
-        .project {
-            margin-bottom: 14px;
-            padding-left: 12px;
-            border-left: 3px solid var(--accent-light);
-        }
-
-        .project:hover {
-            border-left-color: var(--accent);
-        }
-
-        .project-header {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-            margin-bottom: 2px;
-        }
-
-        .project-name {
-            font-weight: 700;
-            font-size: 13px;
-            color: var(--primary);
-        }
-
-        .project-tech {
-            font-size: 11px;
-            color: var(--accent);
-            font-weight: 500;
-        }
-
-        .project-desc {
-            font-size: 12px;
-            color: var(--text-secondary);
-            line-height: 1.6;
-        }
-
-        .project-desc ul {
-            margin-top: 2px;
-            padding-left: 16px;
-        }
-
-        .project-desc li {
-            margin-bottom: 1px;
-        }
+        /* ── Projects ── */
+        .project { margin-bottom: 10px; padding-left: 12px; border-left: 3px solid #f1f5f9; }
+        .project-header { display: flex; justify-content: space-between; align-items: baseline; margin-bottom: 1px; }
+        .project-name { font-weight: 700; font-size: 12.5px; color: var(--primary); }
+        .project-tech { font-size: 11px; color: var(--accent); font-weight: 500; }
+        .project-desc { font-size: 11.5px; color: var(--text-secondary); line-height: 1.55; }
 
         /* ── Education ── */
-        .education-item {
-            display: flex;
-            justify-content: space-between;
-            align-items: baseline;
-        }
+        .edu-item { margin-bottom: 8px; }
+        .edu-header { display: flex; justify-content: space-between; align-items: baseline; }
+        .edu-degree { font-weight: 700; font-size: 12.5px; color: var(--primary); }
+        .edu-year { font-size: 11.5px; color: var(--text-secondary); }
+        .edu-school { font-size: 11.5px; color: var(--text-secondary); }
 
-        .education-item .degree {
-            font-weight: 700;
-            font-size: 13px;
-            color: var(--primary);
-        }
+        /* ── Certs ── */
+        .cert-list { font-size: 11.5px; color: var(--text-secondary); line-height: 1.7; }
+        .cert-name { font-weight: 600; color: var(--text); }
 
-        .education-item .year {
-            font-size: 12px;
-            color: var(--text-secondary);
-        }
-
-        .education-item .school {
-            font-size: 12px;
-            color: var(--text-secondary);
-        }
-
-        /* ── Two Column Footer ── */
-        .two-col {
-            display: grid;
-            grid-template-columns: 1fr 1fr;
-            gap: 24px;
-        }
+        /* ── Two Column ── */
+        .two-col { display: grid; grid-template-columns: 1fr 1fr; gap: 20px; }
 
         /* ── Print ── */
         @media print {
             body { font-size: 12px; }
-            .page { padding: 32px 40px; max-width: none; }
-            .project { break-inside: avoid; }
-            .section { break-inside: avoid; }
+            .page { padding: 28px 36px; max-width: none; }
+            .exp-item, .project, .section { break-inside: avoid; }
         }
     </style>
 </head>
@@ -232,11 +140,15 @@
         <!-- Header -->
         <header class="header">
             <div class="header-left">
-                <h1>Said Mustaqim</h1>
-                <div class="title">IT Consultant · Full-Stack Developer · AI Engineer</div>
-                <div class="tagline">5+ years of experience · 50+ projects delivered · 20+ technologies</div>
+                <h1>Abdullah Said Mustaqim</h1>
+                <div class="title">IT Consultant · AI & Automation Specialist · Full-Stack Developer</div>
+                <div class="tagline">Surabaya, Indonesia · 6+ years experience · 50+ projects delivered</div>
             </div>
             <div class="header-right">
+                <div class="contact-item">
+                    <span class="contact-label">Email:</span>
+                    <a href="mailto:abdullahsaidmustaqim1@gmail.com">abdullahsaidmustaqim1@gmail.com</a>
+                </div>
                 <div class="contact-item">
                     <span class="contact-label">LinkedIn:</span>
                     <a href="https://linkedin.com/in/abdullahsaidmustaqim">linkedin.com/in/abdullahsaidmustaqim</a>
@@ -247,7 +159,7 @@
                 </div>
                 <div class="contact-item">
                     <span class="contact-label">Portfolio:</span>
-                    <a href="https://imsaidm.com">imsaidm.com</a>
+                    <a href="https://saidmustaqim.vercel.app">saidmustaqim.vercel.app</a>
                 </div>
             </div>
         </header>
@@ -257,14 +169,114 @@
             <h2 class="section-title">Professional Summary</h2>
             <div class="summary">
                 <p>
-                    Results-driven IT Consultant and Full-Stack Developer with 5+ years of hands-on experience
-                    architecting, building, and deploying production-grade web applications, AI-powered systems,
-                    and enterprise solutions. Proven track record of delivering 50+ projects across diverse domains
-                    including fintech, e-commerce, AI/ML, gaming, and blockchain. Adept at translating complex
-                    business requirements into scalable technical solutions using modern frameworks and cloud
-                    infrastructure. Passionate about leveraging emerging technologies — from LLM integration
-                    to real-time systems — to drive measurable business outcomes.
+                    Versatile IT Consultant and Full-Stack Developer with 6+ years of hands-on experience building
+                    production-grade web applications, AI-powered automation systems, and enterprise solutions.
+                    Currently serving as Director of IT and leading AI workflow engineering across international teams.
+                    Proven track record of delivering 50+ projects spanning fintech, e-commerce, AI/ML, gaming,
+                    and blockchain. Skilled at translating complex business requirements into scalable technical
+                    solutions using modern frameworks and cloud infrastructure.
                 </p>
+            </div>
+        </section>
+
+        <!-- Work Experience -->
+        <section class="section">
+            <h2 class="section-title">Work Experience</h2>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <span class="exp-role">Director of Information Technology</span>
+                    <span class="exp-company">J-Trip</span>
+                </div>
+                <div class="exp-meta">Feb 2026 – Present · Surabaya</div>
+                <div class="exp-desc">
+                    <ul>
+                        <li>Lead IT strategy, infrastructure, and digital transformation initiatives</li>
+                        <li>Oversee technology stack decisions and engineering team direction</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <span class="exp-role">AI Workflow Automation Engineer</span>
+                    <span class="exp-company">The Fearless Life</span>
+                </div>
+                <div class="exp-meta">Feb 2026 – Present · North America (Remote)</div>
+                <div class="exp-desc">
+                    <ul>
+                        <li>Design and implement AI-powered automation pipelines for business workflows</li>
+                        <li>Integrate LLM APIs, data processing, and task orchestration systems</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <span class="exp-role">Node.js Developer / AI Video Automation Engineer</span>
+                    <span class="exp-company">Upwork (Freelance)</span>
+                </div>
+                <div class="exp-meta">Jan 2026 – Present · International Clients</div>
+                <div class="exp-desc">
+                    <ul>
+                        <li>Deliver full-stack Node.js solutions and AI-driven video generation pipelines for global clients</li>
+                        <li>Build automated content creation systems using FFmpeg, Python, and cloud services</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <span class="exp-role">Software Engineer Project Lead</span>
+                    <span class="exp-company">Quant Waru</span>
+                </div>
+                <div class="exp-meta">Oct 2025 – Present · Surabaya</div>
+                <div class="exp-desc">
+                    <ul>
+                        <li>Lead development of quantitative trading systems and algorithmic strategies</li>
+                        <li>Architect backtesting frameworks and real-time signal generation pipelines</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <span class="exp-role">Administrative Specialist Intern</span>
+                    <span class="exp-company">Trailhead by Salesforce</span>
+                </div>
+                <div class="exp-meta">Nov 2025 – Present · Remote</div>
+                <div class="exp-desc">
+                    <ul>
+                        <li>Completed Salesforce platform certifications and administrative workflows</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <span class="exp-role">Mobile Developer Intern</span>
+                    <span class="exp-company">PT. Annora Multi Intech</span>
+                </div>
+                <div class="exp-meta">Aug – Sep 2024 · Surabaya</div>
+                <div class="exp-desc">
+                    <ul>
+                        <li>Developed mobile application features and contributed to production codebase</li>
+                    </ul>
+                </div>
+            </div>
+
+            <div class="exp-item">
+                <div class="exp-header">
+                    <span class="exp-role">Freelance Programmer</span>
+                    <span class="exp-company">Self Employed</span>
+                </div>
+                <div class="exp-meta">Jan 2020 – Present · 6+ years · Surabaya</div>
+                <div class="exp-desc">
+                    <ul>
+                        <li>Delivered 50+ projects across web, mobile, AI, automation, and gaming domains</li>
+                        <li>Tech stack: React, Next.js, Node.js, Python, Go, PostgreSQL, Docker, AWS</li>
+                    </ul>
+                </div>
             </div>
         </section>
 
@@ -274,7 +286,7 @@
             <div class="skills-grid">
                 <div class="skill-category">
                     <span class="skill-label">Frontend</span>
-                    <span class="skill-items">React, Next.js, Vue, TypeScript, Tailwind CSS, Three.js, GSAP, Framer Motion</span>
+                    <span class="skill-items">React, Next.js, Vue, TypeScript, Tailwind CSS, Three.js, Framer Motion</span>
                 </div>
                 <div class="skill-category">
                     <span class="skill-label">Backend</span>
@@ -282,90 +294,49 @@
                 </div>
                 <div class="skill-category">
                     <span class="skill-label">AI & ML</span>
-                    <span class="skill-items">TensorFlow, PyTorch, LLM Integration, NLP, Computer Vision, LangChain, OpenAI API</span>
+                    <span class="skill-items">TensorFlow, PyTorch, LLM Integration, NLP, Computer Vision, LangChain</span>
                 </div>
                 <div class="skill-category">
                     <span class="skill-label">DevOps</span>
-                    <span class="skill-items">Docker, AWS, CI/CD, Linux, Cloudflare, Nginx, GitHub Actions, VPS</span>
+                    <span class="skill-items">Docker, AWS, CI/CD, Linux, Cloudflare, Nginx, GitHub Actions</span>
                 </div>
                 <div class="skill-category">
                     <span class="skill-label">UI/UX</span>
-                    <span class="skill-items">Figma, Prototyping, Design Systems, Motion Design</span>
+                    <span class="skill-items">Figma, Prototyping, Design Systems, Motion Design, Wireframing</span>
                 </div>
                 <div class="skill-category">
                     <span class="skill-label">Game Dev</span>
-                    <span class="skill-items">Unity, C#, Godot, WebGL, Canvas API</span>
+                    <span class="skill-items">Unity, C#, Godot, WebGL, Canvas API, Physics Engine</span>
                 </div>
             </div>
         </section>
 
-        <!-- Projects & Experience -->
+        <!-- Selected Projects -->
         <section class="section">
-            <h2 class="section-title">Selected Projects & Experience</h2>
+            <h2 class="section-title">Selected Projects</h2>
 
             <div class="project">
                 <div class="project-header">
-                    <span class="project-name">GuidedGrowth Pipeline — AI-Powered Meeting Intelligence</span>
-                    <span class="project-tech">LangChain · OpenAI API · Python</span>
+                    <span class="project-name">GuidedGrowth Pipeline — AI Meeting Intelligence</span>
+                    <span class="project-tech">Python · LangChain · OpenAI · Asana API</span>
                 </div>
-                <div class="project-desc">
-                    <ul>
-                        <li>Engineered an end-to-end AI pipeline that converts meeting recordings into structured action items and strategic insights</li>
-                        <li>Integrated LLM-based NLP for automated transcription analysis, task extraction, and follow-up generation</li>
-                    </ul>
-                </div>
+                <div class="project-desc">End-to-end AI pipeline converting meeting recordings into structured action items via LLM-powered summarization and task routing</div>
             </div>
 
             <div class="project">
                 <div class="project-header">
                     <span class="project-name">PromoVideoHub — AI Video Generation Platform</span>
-                    <span class="project-tech">Next.js · Python · FFmpeg</span>
+                    <span class="project-tech">Next.js · Python · FFmpeg · Docker</span>
                 </div>
-                <div class="project-desc">
-                    <ul>
-                        <li>Built a SaaS platform enabling automated promotional video creation using AI-driven templates and scripting</li>
-                        <li>Designed the full-stack architecture with server-side rendering, media processing pipelines, and cloud deployment</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="project-header">
-                    <span class="project-name">Algorithmic Trading Engine</span>
-                    <span class="project-tech">Python · QuantConnect</span>
-                </div>
-                <div class="project-desc">
-                    <ul>
-                        <li>Developed quantitative trading algorithms with backtesting framework and real-time market data integration</li>
-                        <li>Implemented risk management modules and performance analytics dashboards</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="project-header">
-                    <span class="project-name">Event Management Platform — Enterprise Solution</span>
-                    <span class="project-tech">Next.js · Stripe · PostgreSQL</span>
-                </div>
-                <div class="project-desc">
-                    <ul>
-                        <li>Architected a full-featured event management platform with ticketing, payment processing, and attendee management</li>
-                        <li>Integrated Stripe for secure payment flows and built real-time event analytics</li>
-                    </ul>
-                </div>
+                <div class="project-desc">SaaS platform for automated promotional video creation with AI-driven templates, rendering pipeline, and cloud deployment</div>
             </div>
 
             <div class="project">
                 <div class="project-header">
                     <span class="project-name">TopupCuk — Digital Top-Up Marketplace</span>
-                    <span class="project-tech">Next.js · Tripay API</span>
+                    <span class="project-tech">Next.js · Tailwind · Tripay API · Resend</span>
                 </div>
-                <div class="project-desc">
-                    <ul>
-                        <li>Created a digital marketplace for game top-ups and mobile recharges with multi-gateway payment integration</li>
-                        <li>Built responsive storefront with real-time pricing, order tracking, and automated fulfillment</li>
-                    </ul>
-                </div>
+                <div class="project-desc">E-commerce platform for digital goods with multi-gateway payments, automated QRIS, and instant delivery system</div>
             </div>
 
             <div class="project">
@@ -373,74 +344,63 @@
                     <span class="project-name">Epic RPG Online — Multiplayer Web Game</span>
                     <span class="project-tech">Node.js · Socket.io · SQLite</span>
                 </div>
-                <div class="project-desc">
-                    <ul>
-                        <li>Designed and built a real-time multiplayer RPG with WebSocket-based networking, persistent game state, and player progression</li>
-                        <li>Implemented server-authoritative game logic to prevent cheating and ensure fair play</li>
-                    </ul>
-                </div>
+                <div class="project-desc">Browser-based MMORPG with real-time combat, 6 dungeons, crafting, PvP duels, and server-authoritative game logic</div>
             </div>
 
             <div class="project">
                 <div class="project-header">
-                    <span class="project-name">Solana Trading Bot — Blockchain Automation</span>
-                    <span class="project-tech">Node.js · Solana Web3.js</span>
+                    <span class="project-name">Algorithmic Trading Engine</span>
+                    <span class="project-tech">Python · QuantConnect · Pandas</span>
                 </div>
-                <div class="project-desc">
-                    <ul>
-                        <li>Built an automated trading bot for the Solana blockchain with real-time token monitoring and execution strategies</li>
-                    </ul>
-                </div>
+                <div class="project-desc">Quantitative trading system with backtesting framework, grid search optimization, achieving 7/7 KPIs</div>
             </div>
-
-            <div class="project">
-                <div class="project-header">
-                    <span class="project-name">Job Board Platform — Full-Stack Marketplace</span>
-                    <span class="project-tech">React · PostgreSQL · Node.js</span>
-                </div>
-                <div class="project-desc">
-                    <ul>
-                        <li>Developed a job marketplace with employer dashboards, applicant tracking, search/filter, and role-based access control</li>
-                    </ul>
-                </div>
-            </div>
-
-            <div class="project">
-                <div class="project-header">
-                    <span class="project-name">OpenClaw AI Assistant — Self-Hosted AI Chatbot</span>
-                    <span class="project-tech">Node.js · LLM Integration</span>
-                </div>
-                <div class="project-desc">
-                    <ul>
-                        <li>Deployed and configured a self-hosted AI assistant with multi-channel support and custom tool integrations</li>
-                    </ul>
-                </div>
-            </div>
-
         </section>
 
-        <!-- Education & Certifications -->
+        <!-- Education & Certs -->
         <div class="two-col">
             <section class="section">
                 <h2 class="section-title">Education</h2>
-                <div class="education-item">
-                    <div>
-                        <div class="degree">Bachelor of Computer Science</div>
-                        <div class="school">University — Indonesia</div>
+                <div class="edu-item">
+                    <div class="edu-header">
+                        <span class="edu-degree">B.S. Information Technology</span>
+                        <span class="edu-year">2021 – 2026</span>
                     </div>
-                    <span class="year">20XX – 20XX</span>
+                    <div class="edu-school">Universitas Surabaya (UBAYA)</div>
+                </div>
+                <div class="edu-item">
+                    <div class="edu-header">
+                        <span class="edu-degree">Fullstack Web Development</span>
+                        <span class="edu-year">Jun – Sep 2025</span>
+                    </div>
+                    <div class="edu-school">Purwadhika Digital Technology School</div>
+                </div>
+                <div class="edu-item">
+                    <div class="edu-header">
+                        <span class="edu-degree">Computer Software Engineering</span>
+                        <span class="edu-year">2018 – 2021</span>
+                    </div>
+                    <div class="edu-school">SMK Madinatul Quran</div>
                 </div>
             </section>
 
             <section class="section">
-                <h2 class="section-title">Languages & Interests</h2>
-                <div style="font-size: 12px; color: var(--text-secondary); line-height: 1.8;">
-                    <div><strong>Languages:</strong> Indonesian (Native), English (Professional)</div>
-                    <div><strong>Interests:</strong> Open-source, AI research, game development, quantitative finance</div>
+                <h2 class="section-title">Certifications & More</h2>
+                <div class="cert-list">
+                    <div><span class="cert-name">CompTIA Security+</span></div>
+                    <div><span class="cert-name">Google Cybersecurity Specialization</span></div>
+                    <div><span class="cert-name">Fullstack Web Development Certificate</span> — Purwadhika</div>
+                    <div><span class="cert-name">JavaScript Tutorial Course</span></div>
+                    <div style="margin-top: 8px;">
+                        <strong style="color: var(--primary);">Leadership:</strong><br>
+                        Steering Committee, UBAYA Rapid Chess Competition 2024<br>
+                        Head of Events, UBAYA Rapid Chess Competition 2023
+                    </div>
+                    <div style="margin-top: 6px;">
+                        <strong style="color: var(--primary);">Languages:</strong> Indonesian (Native), English (Professional)
+                    </div>
                 </div>
             </section>
         </div>
-
     </div>
 </body>
 </html>

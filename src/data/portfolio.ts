@@ -19,6 +19,37 @@ export interface Skill {
   items: string[];
 }
 
+export interface Experience {
+  id: string;
+  role: string;
+  company: string;
+  companyUrl?: string;
+  type: "fulltime" | "freelance" | "contract" | "leadership";
+  startDate: string;
+  endDate?: string;
+  location: string;
+  description: string;
+  highlights: string[];
+  tech: string[];
+}
+
+export interface Education {
+  id: string;
+  institution: string;
+  degree: string;
+  field: string;
+  startYear: number;
+  endYear?: number;
+  description?: string;
+}
+
+export interface Certification {
+  id: string;
+  name: string;
+  issuer: string;
+  icon: string;
+}
+
 export const siteConfig = {
   name: "Said Mustaqim",
   title: "Tech Enthusiast",
@@ -33,7 +64,7 @@ export const siteConfig = {
   stats: [
     { label: "Projects Built", value: 50 },
     { label: "Technologies", value: 20 },
-    { label: "Years Coding", value: 5 },
+    { label: "Years Coding", value: 6 },
   ],
 };
 
@@ -87,7 +118,7 @@ export const projects: Project[] = [
     category: ["game", "web"],
     tags: ["Game", "Multiplayer", "Full-Stack"],
     tech: ["Node.js", "Express", "Socket.io", "SQLite", "HTML5", "CSS3", "JavaScript"],
-    image: "https://placehold.co/800x450/1a1a2e/a855f7?text=Epic+RPG",
+    image: undefined,
     githubUrl: "https://github.com/imsaidm/epic-rpg-online",
     featured: true,
   },
@@ -101,7 +132,7 @@ export const projects: Project[] = [
     category: ["web", "automation"],
     tags: ["E-Commerce", "Payment", "Full-Stack"],
     tech: ["Next.js", "Tailwind CSS", "Tripay API", "Resend", "Node.js"],
-    image: "https://placehold.co/800x450/1a1a2e/a855f7?text=TopupCuk",
+    image: undefined,
     liveUrl: "https://topupcuk.com",
     featured: true,
   },
@@ -115,7 +146,7 @@ export const projects: Project[] = [
     category: ["web", "ai"],
     tags: ["AI", "Full-Stack", "Video"],
     tech: ["Next.js", "Python", "FFmpeg", "Docker", "Pexels API"],
-    image: "https://placehold.co/800x450/1a1a2e/a855f7?text=PromoVideoHub",
+    image: undefined,
     githubUrl: "https://github.com/imsaidm/promovideohub",
     featured: true,
   },
@@ -129,7 +160,7 @@ export const projects: Project[] = [
     category: ["ai", "automation"],
     tags: ["AI", "Bot", "Telegram"],
     tech: ["Node.js", "Claude API", "Telegram API", "Docker"],
-    image: "https://placehold.co/800x450/1a1a2e/a855f7?text=OpenClaw+AI",
+    image: undefined,
     githubUrl: "https://github.com/imsaidm/openclaw",
     featured: true,
   },
@@ -143,7 +174,7 @@ export const projects: Project[] = [
     category: ["web"],
     tags: ["Full-Stack", "Platform", "CRUD"],
     tech: ["React", "Node.js", "PostgreSQL", "REST API", "Tailwind CSS"],
-    image: "https://placehold.co/800x450/1a1a2e/a855f7?text=Job+Board",
+    image: undefined,
     githubUrl: "https://github.com/imsaidm/job-board",
     featured: true,
   },
@@ -157,7 +188,7 @@ export const projects: Project[] = [
     category: ["web"],
     tags: ["Platform", "Full-Stack", "Dashboard"],
     tech: ["Next.js", "TypeScript", "PostgreSQL", "Stripe", "Tailwind CSS"],
-    image: "https://placehold.co/800x450/1a1a2e/a855f7?text=Event+Platform",
+    image: undefined,
     githubUrl: "https://github.com/imsaidm/event-platform",
     featured: true,
   },
@@ -171,7 +202,7 @@ export const projects: Project[] = [
     category: ["game", "ai"],
     tags: ["Game", "AI", "Web"],
     tech: ["JavaScript", "Canvas API", "Machine Learning", "LocalStorage"],
-    image: "https://placehold.co/800x450/1a1a2e/a855f7?text=CheatMC",
+    image: undefined,
     githubUrl: "https://github.com/imsaidm/cheatmc",
     featured: false,
   },
@@ -185,7 +216,7 @@ export const projects: Project[] = [
     category: ["ai", "automation"],
     tags: ["Trading", "AI", "Quant"],
     tech: ["Python", "QuantConnect", "Pandas", "NumPy"],
-    image: "https://placehold.co/800x450/1a1a2e/a855f7?text=Trading+Engine",
+    image: undefined,
     featured: false,
   },
   {
@@ -198,7 +229,7 @@ export const projects: Project[] = [
     category: ["automation", "web"],
     tags: ["Bot", "Blockchain", "Web3"],
     tech: ["Node.js", "Solana Web3.js", "Telegram API", "TypeScript"],
-    image: "https://placehold.co/800x450/1a1a2e/a855f7?text=Solana+Bot",
+    image: undefined,
     featured: false,
   },
   {
@@ -211,7 +242,7 @@ export const projects: Project[] = [
     category: ["ai", "automation"],
     tags: ["AI", "Automation", "Pipeline"],
     tech: ["Python", "OpenAI", "Asana API", "GitHub Actions"],
-    image: "https://placehold.co/800x450/1a1a2e/a855f7?text=GuidedGrowth",
+    image: undefined,
     githubUrl: "https://github.com/imsaidm/guidedgrowth",
     featured: false,
   },
@@ -225,17 +256,176 @@ export const projects: Project[] = [
     category: ["automation"],
     tags: ["Security", "Research", "Automation"],
     tech: ["Python", "Selenium", "HTTP", "Browser Automation"],
-    image: "https://placehold.co/800x450/1a1a2e/a855f7?text=CF+Bypass",
+    image: undefined,
     featured: false,
   },
 ];
 
+export const experiences: Experience[] = [
+  {
+    id: "jtrip",
+    role: "Director of Information Technology",
+    company: "J-Trip",
+    type: "fulltime",
+    startDate: "2026-02",
+    location: "Surabaya",
+    description: "Leading IT strategy, infrastructure, and digital transformation for a growing travel tech company.",
+    highlights: [
+      "Define and execute technology roadmap across all business units",
+      "Oversee system architecture decisions and engineering team direction",
+      "Implement AI-driven automation to streamline internal operations",
+    ],
+    tech: ["Next.js", "Node.js", "PostgreSQL", "Docker", "AWS"],
+  },
+  {
+    id: "fearless",
+    role: "AI Workflow Automation Engineer",
+    company: "The Fearless Life",
+    type: "contract",
+    startDate: "2026-02",
+    location: "North America (Remote)",
+    description: "Designing and building AI-powered automation pipelines for a US-based coaching and productivity company.",
+    highlights: [
+      "Architect end-to-end AI pipelines integrating LLM APIs with business workflows",
+      "Build automated content generation and meeting intelligence systems",
+      "Reduce manual operational work by 60% through intelligent automation",
+    ],
+    tech: ["Python", "LangChain", "OpenAI API", "GitHub Actions", "Docker"],
+  },
+  {
+    id: "quant",
+    role: "Software Engineer Project Lead",
+    company: "Quant Waru",
+    type: "fulltime",
+    startDate: "2025-10",
+    location: "Surabaya",
+    description: "Leading development of quantitative trading systems and algorithmic strategies for crypto markets.",
+    highlights: [
+      "Architect backtesting frameworks and real-time signal generation",
+      "Achieve 7/7 KPI targets on trading strategy performance",
+      "Build data pipelines for market analysis and risk management",
+    ],
+    tech: ["Python", "QuantConnect", "Pandas", "NumPy", "TypeScript"],
+  },
+  {
+    id: "upwork",
+    role: "Full-Stack Developer",
+    company: "Upwork",
+    type: "freelance",
+    startDate: "2026-01",
+    location: "International Clients",
+    description: "Delivering full-stack solutions and AI-driven automation for global clients on the world's largest freelance platform.",
+    highlights: [
+      "Build Node.js backends and Next.js frontends for diverse client needs",
+      "Create AI video generation pipelines using FFmpeg and Python",
+      "Maintain top-rated freelancer status with consistent 5-star reviews",
+    ],
+    tech: ["Node.js", "Next.js", "Python", "FFmpeg", "Docker"],
+  },
+  {
+    id: "freelance",
+    role: "Freelance Full-Stack Developer",
+    company: "Self Employed",
+    type: "freelance",
+    startDate: "2020-01",
+    location: "Surabaya",
+    description: "Building web apps, AI systems, games, and automation tools for clients across Indonesia and internationally.",
+    highlights: [
+      "Delivered 50+ projects across web, mobile, AI, and gaming domains",
+      "Built and scaled e-commerce platforms, SaaS products, and trading systems",
+      "Self-taught from high school, coding professionally since age 16",
+    ],
+    tech: ["React", "Next.js", "Node.js", "Python", "Go", "PostgreSQL", "Docker"],
+  },
+  {
+    id: "annora",
+    role: "Mobile Developer Intern",
+    company: "PT. Annora Multi Intech",
+    type: "fulltime",
+    startDate: "2024-08",
+    endDate: "2024-09",
+    location: "Surabaya",
+    description: "Developed mobile application features and contributed to production codebases during a focused internship.",
+    highlights: [
+      "Implemented new mobile app features in production environment",
+      "Collaborated with senior developers on code reviews and architecture",
+    ],
+    tech: ["Mobile Development", "REST API"],
+  },
+  {
+    id: "chess",
+    role: "Steering Committee & Head of Events",
+    company: "UKM Catur Universitas Surabaya",
+    type: "leadership",
+    startDate: "2022-09",
+    endDate: "2024-05",
+    location: "Surabaya",
+    description: "Organized and led university-level rapid chess competitions for two consecutive years.",
+    highlights: [
+      "Head of Events for UBAYA Rapid Chess Competition 2023",
+      "Steering Committee for UBAYA Rapid Chess Competition 2024",
+      "Managed logistics, sponsorships, and participant coordination",
+    ],
+    tech: [],
+  },
+];
+
+export const educations: Education[] = [
+  {
+    id: "ubaya",
+    institution: "Universitas Surabaya (UBAYA)",
+    degree: "Bachelor of Science",
+    field: "Information Technology",
+    startYear: 2021,
+    endYear: 2026,
+    description: "Focus on Network & Cyber Security (NCS). Active in chess club and technology communities.",
+  },
+  {
+    id: "purwadhika",
+    institution: "Purwadhika Digital Technology School",
+    degree: "Certificate",
+    field: "Fullstack Web Development",
+    startYear: 2025,
+    endYear: 2025,
+    description: "Intensive bootcamp covering modern full-stack development with React, Node.js, and deployment.",
+  },
+  {
+    id: "smk",
+    institution: "SMK Madinatul Quran",
+    degree: "Vocational Diploma",
+    field: "Computer Software Engineering",
+    startYear: 2018,
+    endYear: 2021,
+    description: "Foundation in software engineering. Started freelancing professionally during final year.",
+  },
+];
+
+export const certifications: Certification[] = [
+  {
+    id: "comptia",
+    name: "CompTIA Security+",
+    issuer: "CompTIA",
+    icon: "shield",
+  },
+  {
+    id: "google-cyber",
+    name: "Google Cybersecurity Specialization",
+    issuer: "Google",
+    icon: "lock",
+  },
+  {
+    id: "purwadhika-cert",
+    name: "Fullstack Web Development",
+    issuer: "Purwadhika",
+    icon: "code",
+  },
+];
+
 export const typingTexts = [
-  "Tech Enthusiast",
+  "IT Consultant",
   "Full-Stack Developer",
   "AI Engineer",
   "Game Developer",
-  "UI/UX Designer",
-  "Automation Builder",
+  "Automation Specialist",
   "Problem Solver",
 ];
