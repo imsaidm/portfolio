@@ -22,6 +22,7 @@ export default function LoadingScreen() {
 
         let progressInterval: NodeJS.Timeout;
         let dismissed = false;
+        let dismissTimer: NodeJS.Timeout;
 
         const tryDismiss = () => {
             const f = readyFlags.current;
@@ -30,7 +31,7 @@ export default function LoadingScreen() {
                 // Smoothly finish progress
                 setProgress(100);
                 // Give the progress bar time to fill, then dismiss
-                setTimeout(() => {
+                dismissTimer = setTimeout(() => {
                     setLoading(false);
                     document.body.style.overflow = "";
                 }, 400);
@@ -85,6 +86,7 @@ export default function LoadingScreen() {
         return () => {
             clearInterval(progressInterval);
             clearTimeout(minTimer);
+            clearTimeout(dismissTimer);
             window.removeEventListener("load", onLoad);
             document.body.style.overflow = "";
         };

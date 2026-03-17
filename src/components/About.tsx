@@ -7,7 +7,7 @@ const stats = [
     { value: "6+", label: "Years Experience" },
     { value: "50+", label: "Projects Delivered" },
     { value: "20+", label: "Technologies" },
-    { value: "∞", label: "Cups of Coffee" },
+    { value: "3", label: "Concurrent Roles" },
 ];
 
 const highlights = [
@@ -17,8 +17,8 @@ const highlights = [
                 <path d="M12 2L2 7l10 5 10-5-10-5z" /><path d="M2 17l10 5 10-5" /><path d="M2 12l10 5 10-5" />
             </svg>
         ),
-        title: "Builds Everything",
-        desc: "Web apps, mobile, games, bots, AI — if it involves code, I can make it.",
+        title: "Zero to Production",
+        desc: "50+ projects from concept to deployed product. Web, AI, games, bots — name it.",
     },
     {
         icon: (
@@ -26,8 +26,8 @@ const highlights = [
                 <circle cx="12" cy="12" r="10" /><path d="M12 6v6l4 2" />
             </svg>
         ),
-        title: "Design + Engineering",
-        desc: "Pixel-perfect UI fused with rock-solid architecture.",
+        title: "Design-Engineer Hybrid",
+        desc: "I design the UI in Figma, then build the backend in Go. Same person.",
     },
     {
         icon: (
@@ -38,8 +38,8 @@ const highlights = [
                 <line x1="12" y1="22.08" x2="12" y2="12" />
             </svg>
         ),
-        title: "Always Learning",
-        desc: "New tech, new challenge — I adapt and master it fast.",
+        title: "Unreasonably Fast Learner",
+        desc: "Picked up quant trading in weeks. Built a trading engine that hit 7/7 KPIs.",
     },
 ];
 
@@ -77,22 +77,23 @@ export default function About() {
                         className="lg:col-span-3"
                     >
                         <h3 className="text-2xl md:text-3xl font-display font-semibold mb-6">
-                            From coding at 16 to{" "}
-                            <span className="gradient-text">leading tech teams.</span>
+                            From freelancing at 16 to{" "}
+                            <span className="gradient-text">directing IT at 22.</span>
                         </h3>
                         <p className="text-muted leading-relaxed mb-4">
-                            I started freelancing professionally in high school and never
-                            stopped. 6+ years later, I&apos;m a Director of IT, an AI Workflow
-                            Engineer for US-based companies, and a Software Engineer Lead
-                            building quantitative trading systems — all while finishing my
-                            degree in Information Technology at Universitas Surabaya.
+                            Most people my age are figuring out their first internship.
+                            I&apos;ve been shipping production code since high school. Today I
+                            direct IT strategy at J-Trip, architect AI pipelines for a US
+                            coaching company, and lead quant trading systems — simultaneously.
+                            Oh, and I&apos;m still finishing my degree at UBAYA because apparently
+                            sleep is optional.
                         </p>
                         <p className="text-muted leading-relaxed mb-8">
-                            I don&apos;t just write code — I engineer experiences. From web
-                            apps and AI automation to multiplayer games and blockchain bots,
-                            I&apos;ve delivered 50+ projects across every domain imaginable. Certified
-                            in CompTIA Security+ and Google Cybersecurity, with a passion for
-                            building systems that are both beautiful and bulletproof.
+                            50+ projects. Web apps, AI automation, multiplayer games, trading
+                            bots, blockchain tools — I don&apos;t specialize because I haven&apos;t
+                            found a domain I can&apos;t crack. CompTIA Security+ and Google
+                            Cybersecurity certified, because shipping fast means nothing if
+                            it&apos;s not secure.
                         </p>
 
                         {/* Highlight Cards */}
@@ -173,7 +174,7 @@ export default function About() {
                                 <div className="pl-8"><span className="text-emerald-400">&quot;Automation&quot;</span>,</div>
                                 <div className="pl-8"><span className="text-emerald-400">&quot;Design&quot;</span></div>
                                 <div className="pl-4">],</div>
-                                <div className="pl-4"><span className="text-accent-pink">motto</span>: <span className="text-emerald-400">&quot;If it exists, I can build it&quot;</span></div>
+                                <div className="pl-4"><span className="text-accent-pink">motto</span>: <span className="text-emerald-400">&quot;Ship it before they think it's possible&quot;</span></div>
                                 <div>{'}'};</div>
                             </div>
                         </motion.div>

@@ -83,7 +83,7 @@ export default function Contact() {
                     transition={{ delay: 0.1, duration: 0.5 }}
                     className="text-muted text-lg mb-16 max-w-lg"
                 >
-                    Got a project in mind? Let&apos;s build something amazing together.
+                    Have a wild idea? I&apos;ll turn it into a working product.
                 </motion.p>
 
                 {/* Social Links */}
@@ -100,8 +100,8 @@ export default function Contact() {
                             Get in Touch
                         </h3>
                         <p className="text-muted text-sm mb-8 relative z-10">
-                            I&apos;m always open to discussing new projects, creative ideas,
-                            or opportunities to be part of something great.
+                            Whether it&apos;s a startup MVP, AI integration, or a problem
+                            no one else could solve — I&apos;m one message away.
                         </p>
 
                         <div className="space-y-3 relative z-10">

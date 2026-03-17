@@ -43,18 +43,20 @@ export interface Education {
   description?: string;
 }
 
+export type CertIcon = "shield" | "lock" | "code";
+
 export interface Certification {
   id: string;
   name: string;
   issuer: string;
-  icon: string;
+  icon: CertIcon;
 }
 
 export const siteConfig = {
   name: "Said Mustaqim",
-  title: "Tech Enthusiast",
+  title: "Builder of Things That Shouldn't Exist Yet",
   description:
-    "I build things that live on the internet. From pixel-perfect interfaces to intelligent systems — I turn complex problems into elegant solutions.",
+    "I've shipped 50+ products since age 16 — from AI automation pipelines for US companies to multiplayer RPGs with real-time combat. If it runs on code, I've probably built it.",
   social: {
     github: "https://github.com/imsaidm",
     linkedin: "https://www.linkedin.com/in/abdullahsaidmustaqim/",
@@ -62,9 +64,9 @@ export const siteConfig = {
     tiktok: "https://tiktok.com/@imsaidm",
   },
   stats: [
-    { label: "Projects Built", value: 50 },
-    { label: "Technologies", value: 20 },
-    { label: "Years Coding", value: 6 },
+    { label: "Projects Shipped", value: 50 },
+    { label: "Tech Mastered", value: 20 },
+    { label: "Years Building", value: 6 },
   ],
 };
 
@@ -72,37 +74,37 @@ export const skills: Skill[] = [
   {
     category: "Frontend",
     icon: "code",
-    description: "Crafting responsive, beautiful interfaces",
+    description: "Interfaces that feel fast and look sharp",
     items: ["React", "Next.js", "Vue", "TypeScript", "Tailwind CSS", "Three.js", "GSAP", "Framer Motion"],
   },
   {
     category: "Backend",
     icon: "server",
-    description: "Building robust, scalable systems",
+    description: "APIs and systems that handle real traffic",
     items: ["Node.js", "Python", "Go", "PostgreSQL", "MongoDB", "Redis", "GraphQL", "REST API"],
   },
   {
     category: "AI & ML",
     icon: "brain",
-    description: "Intelligent solutions & automation",
+    description: "LLMs, pipelines, and models in production",
     items: ["TensorFlow", "PyTorch", "LLM Integration", "NLP", "Computer Vision", "LangChain", "OpenAI API"],
   },
   {
     category: "UI/UX Design",
     icon: "palette",
-    description: "Human-centered design thinking",
+    description: "Research-driven design, not guesswork",
     items: ["Figma", "Prototyping", "Design Systems", "Motion Design", "User Research", "Wireframing"],
   },
   {
     category: "Game Dev",
     icon: "gamepad",
-    description: "Immersive interactive experiences",
+    description: "From game engine to pixel art — solo",
     items: ["Unity", "C#", "Godot", "WebGL", "Game Design", "Physics Engine", "Canvas API"],
   },
   {
     category: "DevOps & Cloud",
     icon: "cloud",
-    description: "Shipping fast, scaling smart",
+    description: "Docker, CI/CD, and infra I manage myself",
     items: ["Docker", "AWS", "CI/CD", "Linux", "Cloudflare", "Nginx", "GitHub Actions", "VPS"],
   },
 ];
@@ -112,7 +114,7 @@ export const projects: Project[] = [
     id: "epic-rpg",
     title: "Epic RPG Online",
     description:
-      "Web-based multiplayer RPG game with real-time combat, dungeons, crafting, and PvP duels. Pixel art aesthetic with full game mechanics including leveling, inventory, and boss fights.",
+      "Browser MMORPG with real-time Socket.io combat, 6 dungeons, 18+ monsters, crafting, and PvP duels. Built the entire game engine, server-authoritative logic, and pixel art UI solo.",
     longDescription:
       "Complete browser-based MMORPG featuring real-time multiplayer via Socket.io, turn-based combat against 18+ monsters, 6 dungeons with boss fights, crafting system, PvP dueling, and a full pixel art UI.",
     category: ["game", "web"],
@@ -126,7 +128,7 @@ export const projects: Project[] = [
     id: "topupcuk",
     title: "TopupCuk",
     description:
-      "A sleek digital top-up marketplace with integrated payment gateway, automated QRIS generation, and instant delivery system for digital products.",
+      "Live e-commerce platform processing real payments via Tripay. Automated QRIS generation, instant email delivery, and a checkout flow that converts. Currently serving real users.",
     longDescription:
       "Full-featured e-commerce platform for digital goods with dynamic payment processing, email-based delivery, and a premium user experience.",
     category: ["web", "automation"],
@@ -140,7 +142,7 @@ export const projects: Project[] = [
     id: "promovideohub",
     title: "PromoVideoHub",
     description:
-      "AI-powered promotional video generation platform. Automatically creates engaging marketing videos with intelligent scene composition and dynamic transitions.",
+      "Feed it a product brief, get a polished promo video. AI selects stock footage, composes scenes, adds transitions, and renders — zero manual editing. Built for Upwork clients.",
     longDescription:
       "End-to-end video production pipeline with AI-driven content generation, automated rendering, and cloud deployment.",
     category: ["web", "ai"],
@@ -154,7 +156,7 @@ export const projects: Project[] = [
     id: "openclaw",
     title: "OpenClaw AI Assistant",
     description:
-      "Self-hosted AI assistant with Telegram integration. Multi-user chat bot powered by Claude API with configurable personality and command system.",
+      "Self-hosted AI assistant on personal infra, controlled via Telegram. Multi-user, custom personality, full command system — powered by Claude API. My daily driver.",
     longDescription:
       "A customizable AI chatbot deployed on personal infrastructure with Telegram as the primary interface, supporting multiple concurrent users.",
     category: ["ai", "automation"],
@@ -168,7 +170,7 @@ export const projects: Project[] = [
     id: "jobboard",
     title: "Job Board Platform",
     description:
-      "Modern job listing platform with advanced filtering, real-time search, and applicant tracking. Features responsive design and employer dashboards.",
+      "Full-stack job marketplace: real-time search, smart filtering, applicant tracking, and employer dashboards. React frontend, Node.js API, PostgreSQL — production-grade architecture.",
     longDescription:
       "Full-stack job marketplace connecting employers and job seekers with intelligent matching and streamlined application workflows.",
     category: ["web"],
@@ -182,7 +184,7 @@ export const projects: Project[] = [
     id: "event-platform",
     title: "Event Management Platform",
     description:
-      "Comprehensive event management system with ticketing, scheduling, attendee management, and real-time analytics dashboard.",
+      "End-to-end event platform: create events, sell tickets via Stripe, manage attendees, and track performance with live analytics.",
     longDescription:
       "Enterprise-grade event platform handling the full lifecycle from creation to post-event analytics.",
     category: ["web"],
@@ -210,7 +212,7 @@ export const projects: Project[] = [
     id: "trading-engine",
     title: "Algorithmic Trading Engine",
     description:
-      "Quantitative trading strategy engine achieving 7/7 KPIs. Technical analysis, backtesting framework, and automated signal generation for crypto markets.",
+      "Quant trading engine that hit 7/7 performance KPIs. Grid-search optimized strategies, backtesting on historical data, and real-time signal generation for crypto markets.",
     longDescription:
       "Rule-based trading system optimized through grid search parameter tuning with comprehensive backtesting on historical data.",
     category: ["ai", "automation"],
@@ -236,7 +238,7 @@ export const projects: Project[] = [
     id: "guidedgrowth",
     title: "GuidedGrowth Pipeline",
     description:
-      "Intelligent meeting-to-action pipeline. Processes recordings, extracts insights with AI, and creates structured tasks in project management tools.",
+      "Drop a meeting recording, get structured action items in Asana. LLM-powered pipeline that summarizes, extracts tasks, and routes them — fully automated.",
     longDescription:
       "Automated workflow connecting meeting recordings to actionable tasks through AI-powered summarization and routing.",
     category: ["ai", "automation"],
@@ -271,9 +273,9 @@ export const experiences: Experience[] = [
     location: "Surabaya",
     description: "Leading IT strategy, infrastructure, and digital transformation for a growing travel tech company.",
     highlights: [
-      "Define and execute technology roadmap across all business units",
-      "Oversee system architecture decisions and engineering team direction",
-      "Implement AI-driven automation to streamline internal operations",
+      "Own the technology roadmap across all business units — from infrastructure to product",
+      "Drive architecture decisions and set engineering standards for the dev team",
+      "Deploy AI automation that cuts manual operational work across departments",
     ],
     tech: ["Next.js", "Node.js", "PostgreSQL", "Docker", "AWS"],
   },
@@ -286,9 +288,9 @@ export const experiences: Experience[] = [
     location: "North America (Remote)",
     description: "Designing and building AI-powered automation pipelines for a US-based coaching and productivity company.",
     highlights: [
-      "Architect end-to-end AI pipelines integrating LLM APIs with business workflows",
-      "Build automated content generation and meeting intelligence systems",
-      "Reduce manual operational work by 60% through intelligent automation",
+      "Architect AI pipelines that connect LLM APIs to real business workflows end-to-end",
+      "Build systems that auto-generate content and extract intelligence from meetings",
+      "Cut 60% of manual operational work — measurable impact, not just automation for automation's sake",
     ],
     tech: ["Python", "LangChain", "OpenAI API", "GitHub Actions", "Docker"],
   },
@@ -301,9 +303,9 @@ export const experiences: Experience[] = [
     location: "Surabaya",
     description: "Leading development of quantitative trading systems and algorithmic strategies for crypto markets.",
     highlights: [
-      "Architect backtesting frameworks and real-time signal generation",
-      "Achieve 7/7 KPI targets on trading strategy performance",
-      "Build data pipelines for market analysis and risk management",
+      "Architect backtesting framework + real-time signal engine from scratch",
+      "Hit 7/7 KPI targets on strategy performance — every single metric",
+      "Build data pipelines powering market analysis and risk decisions",
     ],
     tech: ["Python", "QuantConnect", "Pandas", "NumPy", "TypeScript"],
   },
@@ -331,9 +333,9 @@ export const experiences: Experience[] = [
     location: "Surabaya",
     description: "Building web apps, AI systems, games, and automation tools for clients across Indonesia and internationally.",
     highlights: [
-      "Delivered 50+ projects across web, mobile, AI, and gaming domains",
-      "Built and scaled e-commerce platforms, SaaS products, and trading systems",
-      "Self-taught from high school, coding professionally since age 16",
+      "Shipped 50+ production projects: web apps, mobile, AI systems, games, trading bots",
+      "Built e-commerce platforms, SaaS products, and trading systems that handle real money",
+      "Started at 16, went pro immediately — no gap between learning and earning",
     ],
     tech: ["React", "Next.js", "Node.js", "Python", "Go", "PostgreSQL", "Docker"],
   },
@@ -362,9 +364,9 @@ export const experiences: Experience[] = [
     location: "Surabaya",
     description: "Organized and led university-level rapid chess competitions for two consecutive years.",
     highlights: [
-      "Head of Events for UBAYA Rapid Chess Competition 2023",
-      "Steering Committee for UBAYA Rapid Chess Competition 2024",
-      "Managed logistics, sponsorships, and participant coordination",
+      "Led all event operations for UBAYA Rapid Chess Competition 2023",
+      "Promoted to Steering Committee for the 2024 edition",
+      "Coordinated logistics, secured sponsorships, and managed 100+ participants",
     ],
     tech: [],
   },
@@ -378,7 +380,7 @@ export const educations: Education[] = [
     field: "Information Technology",
     startYear: 2021,
     endYear: 2026,
-    description: "Focus on Network & Cyber Security (NCS). Active in chess club and technology communities.",
+    description: "Specializing in Network & Cyber Security. Led chess club events, shipped freelance projects throughout.",
   },
   {
     id: "purwadhika",
@@ -387,7 +389,7 @@ export const educations: Education[] = [
     field: "Fullstack Web Development",
     startYear: 2025,
     endYear: 2025,
-    description: "Intensive bootcamp covering modern full-stack development with React, Node.js, and deployment.",
+    description: "Intensive full-stack bootcamp: React, Node.js, cloud deployment. Formalized skills I'd been using professionally for years.",
   },
   {
     id: "smk",
@@ -396,7 +398,7 @@ export const educations: Education[] = [
     field: "Computer Software Engineering",
     startYear: 2018,
     endYear: 2021,
-    description: "Foundation in software engineering. Started freelancing professionally during final year.",
+    description: "Where it all started. Learned software engineering fundamentals, landed first paying clients before graduation.",
   },
 ];
 
@@ -422,10 +424,10 @@ export const certifications: Certification[] = [
 ];
 
 export const typingTexts = [
-  "IT Consultant",
-  "Full-Stack Developer",
-  "AI Engineer",
-  "Game Developer",
-  "Automation Specialist",
-  "Problem Solver",
+  "Director IT @ 22",
+  "AI Engineer (US Remote)",
+  "50+ Projects Shipped",
+  "Full-Stack Since 16",
+  "Game Dev & Chess Nerd",
+  "Security+ Certified",
 ];

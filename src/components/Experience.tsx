@@ -2,7 +2,7 @@
 
 import { useRef } from "react";
 import { motion, useInView } from "framer-motion";
-import { experiences } from "@/data/portfolio";
+import { experiences, type Experience as ExperienceType } from "@/data/portfolio";
 
 const typeColors: Record<string, string> = {
     fulltime: "bg-accent-purple/20 text-accent-purple",
@@ -18,13 +18,16 @@ const typeLabels: Record<string, string> = {
     leadership: "Leadership",
 };
 
-function formatDate(d: string) {
-    const [y, m] = d.split("-");
+function formatDate(d: string): string {
+    const parts = d.split("-");
+    if (parts.length < 2) return d;
+    const [y, m] = parts;
     const months = ["Jan", "Feb", "Mar", "Apr", "May", "Jun", "Jul", "Aug", "Sep", "Oct", "Nov", "Dec"];
-    return `${months[parseInt(m) - 1]} ${y}`;
+    const monthIndex = parseInt(m, 10) - 1;
+    return `${months[monthIndex] ?? m} ${y}`;
 }
 
-function ExperienceCard({ exp, index }: { exp: typeof experiences[0]; index: number }) {
+function ExperienceCard({ exp, index }: { exp: ExperienceType; index: number }) {
     const ref = useRef(null);
     const isInView = useInView(ref, { once: true, margin: "-60px" });
 
@@ -77,7 +80,7 @@ function ExperienceCard({ exp, index }: { exp: typeof experiences[0]; index: num
                     {exp.highlights.map((h) => (
                         <li key={h} className="flex items-start gap-2 text-sm text-muted">
                             <span className="text-accent-purple mt-1.5 shrink-0">
-                                <svg width="8" height="8" viewBox="0 0 8 8" fill="currentColor">
+                                <svg aria-hidden="true" focusable="false" width="8" height="8" viewBox="0 0 8 8" fill="currentColor">
                                     <circle cx="4" cy="4" r="3" />
                                 </svg>
                             </span>
