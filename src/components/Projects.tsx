@@ -200,17 +200,19 @@ export default function Projects() {
                                                 />
                                             )}
 
-                                            {/* Decorative grid pattern */}
-                                            <div
-                                                className="absolute inset-0 opacity-[0.04]"
-                                                style={{
-                                                    backgroundImage: `radial-gradient(circle, hsl(${hue}, 70%, 60%) 1px, transparent 1px)`,
-                                                    backgroundSize: "20px 20px",
-                                                }}
-                                            />
-
-                                            {/* Tech stack icons */}
-                                            <ProjectTechIcons techs={project.tech} hue={hue} />
+                                            {/* Decorative grid pattern + tech icons (only when no thumbnail) */}
+                                            {!project.image && (
+                                                <>
+                                                    <div
+                                                        className="absolute inset-0 opacity-[0.04]"
+                                                        style={{
+                                                            backgroundImage: `radial-gradient(circle, hsl(${hue}, 70%, 60%) 1px, transparent 1px)`,
+                                                            backgroundSize: "20px 20px",
+                                                        }}
+                                                    />
+                                                    <ProjectTechIcons techs={project.tech} hue={hue} />
+                                                </>
+                                            )}
 
                                             {/* Overlay on hover */}
                                             <div className="absolute inset-0 bg-black/60 opacity-0 group-hover:opacity-100 transition-all duration-400 flex items-center justify-center gap-3 z-10">
