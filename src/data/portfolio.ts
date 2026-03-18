@@ -64,9 +64,9 @@ export const siteConfig = {
     tiktok: "https://tiktok.com/@imsaidm",
   },
   stats: [
-    { label: "Projects Shipped", value: 50 },
-    { label: "Tech Mastered", value: 20 },
-    { label: "Years Building", value: 6 },
+    { label: "Projects Built", value: 50 },
+    { label: "Technologies", value: 20 },
+    { label: "Years Coding", value: 5 },
   ],
 };
 
@@ -424,10 +424,11 @@ export const certifications: Certification[] = [
 ];
 
 export const typingTexts = [
-  "Director IT @ 22",
-  "AI Engineer (US Remote)",
-  "50+ Projects Shipped",
-  "Full-Stack Since 16",
-  "Game Dev & Chess Nerd",
-  "Security+ Certified",
+  "Tech Enthusiast",
+  "Full-Stack Developer",
+  "AI Engineer",
+  "Game Developer",
+  "UI/UX Designer",
+  "Automation Builder",
+  "Problem Solver",
 ];
