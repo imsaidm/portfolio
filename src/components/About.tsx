@@ -4,7 +4,7 @@ import { motion, useInView } from "framer-motion";
 import { useRef } from "react";
 
 const stats = [
-    { value: "6+", label: "Years Experience" },
+    { value: "5+", label: "Years Experience" },
     { value: "50+", label: "Projects Delivered" },
     { value: "20+", label: "Technologies" },
     { value: "∞", label: "Cups of Coffee" },
@@ -77,22 +77,22 @@ export default function About() {
                         className="lg:col-span-3"
                     >
                         <h3 className="text-2xl md:text-3xl font-display font-semibold mb-6">
-                            From coding at 16 to{" "}
-                            <span className="gradient-text">leading tech teams.</span>
+                            A tech enthusiast who{" "}
+                            <span className="gradient-text">builds everything.</span>
                         </h3>
                         <p className="text-muted leading-relaxed mb-4">
-                            I started freelancing professionally in high school and never
-                            stopped. 6+ years later, I&apos;m a Director of IT, an AI Workflow
-                            Engineer for US-based companies, and a Software Engineer Lead
-                            building quantitative trading systems — all while finishing my
-                            degree in Information Technology at Universitas Surabaya.
+                            I&apos;m a multidisciplinary developer and designer who believes in
+                            the power of technology to transform ideas into reality. My
+                            journey in tech has taken me through the entire spectrum — from
+                            crafting beautiful user interfaces to architecting complex backend
+                            systems, from building AI-powered solutions to developing immersive
+                            games.
                         </p>
                         <p className="text-muted leading-relaxed mb-8">
-                            I don&apos;t just write code — I engineer experiences. From web
-                            apps and AI automation to multiplayer games and blockchain bots,
-                            I&apos;ve delivered 50+ projects across every domain imaginable. Certified
-                            in CompTIA Security+ and Google Cybersecurity, with a passion for
-                            building systems that are both beautiful and bulletproof.
+                            I don&apos;t just write code — I engineer experiences. Whether it&apos;s
+                            a sleek web application, an intelligent automation system, or an
+                            interactive game, I approach every project with the same obsession
+                            for quality and attention to detail.
                         </p>
 
                         {/* Highlight Cards */}
@@ -164,8 +164,8 @@ export default function About() {
                             <div className="p-4 font-mono text-sm leading-relaxed">
                                 <div><span className="text-accent-purple">const</span> <span className="text-accent-cyan">developer</span> = {'{'}</div>
                                 <div className="pl-4"><span className="text-accent-pink">name</span>: <span className="text-emerald-400">&quot;Said Mustaqim&quot;</span>,</div>
-                                <div className="pl-4"><span className="text-accent-pink">role</span>: <span className="text-emerald-400">&quot;Director IT @ J-Trip&quot;</span>,</div>
-                                <div className="pl-4"><span className="text-accent-pink">freelanceSince</span>: <span className="text-emerald-400">2020</span>,</div>
+                                <div className="pl-4"><span className="text-accent-pink">role</span>: <span className="text-emerald-400">&quot;Tech Polymath&quot;</span>,</div>
+                                <div className="pl-4"><span className="text-accent-pink">canDo</span>: <span className="text-emerald-400">&quot;literally everything&quot;</span>,</div>
                                 <div className="pl-4"><span className="text-accent-pink">domains</span>: [</div>
                                 <div className="pl-8"><span className="text-emerald-400">&quot;Full-Stack&quot;</span>,</div>
                                 <div className="pl-8"><span className="text-emerald-400">&quot;AI / ML&quot;</span>,</div>

@@ -69,7 +69,7 @@ export default function Footer() {
                             <span className="text-accent-purple">/&gt;</span>
                         </span>
                         <p className="text-xs text-muted/50">
-                            Building the future, one commit at a time.
+                            Shipping code from Surabaya to the world.
                         </p>
                     </motion.div>
 
